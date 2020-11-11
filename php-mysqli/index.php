@@ -67,16 +67,15 @@ while ($result = mysqli_fetch_assoc($q)) {
 
 // print_r($rows);
 
+//return if the query exc successfully
+$result =  mysqli_affected_rows($connection);
 
-// $result =  mysqli_affected_rows($connection);
+if ($result == 1) {
+    echo 'Done';
+} else {
+    echo 'error';
+}
 
-// if ($result == 1) {
-//     echo 'Done';
-// } else {
-//     echo 'error';
-// }
-
-// }
 
 ?>
 
